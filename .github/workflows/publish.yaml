@@ -4,6 +4,10 @@ on:
   push:
     tags:
       - "v*"
+    branch: "*"
+  workflow_dispatch:
+
+env: "Calculator Tauri"
 
 jobs:
   publish-tauri:
