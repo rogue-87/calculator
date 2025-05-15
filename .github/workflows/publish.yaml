@@ -43,7 +43,9 @@ jobs:
         # You can remove the one that doesn't apply to your app to speed up the workflow a bit.
 
       - name: install frontend dependencies
-        run: npm install # change this to npm, pnpm or bun depending on which one you use.
+        run: | # change this to npm, pnpm or bun depending on which one you use.
+          npm install -g pnpm
+          pnpm install
 
       - uses: tauri-apps/tauri-action@v0
         env:
