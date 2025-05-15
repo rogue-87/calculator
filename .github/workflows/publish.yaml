@@ -1,11 +1,6 @@
 name: "publish"
 
-on:
-  push:
-    tags:
-      - "v*"
-    branch: "*"
-  workflow_dispatch:
+on: workflow_dispatch
 
 env: "Calculator Tauri"
 
