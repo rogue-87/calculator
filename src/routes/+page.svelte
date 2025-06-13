@@ -1,4 +1,6 @@
 <script lang="ts">
+	import * as mathjs from "mathjs";
+
 	$effect(() => {
 		let textBox = document.getElementById("textBox") as HTMLInputElement;
 
@@ -15,7 +17,7 @@
 						textBox.value = "";
 						break;
 					case "=":
-						textBox.value = eval(textBox.value);
+						textBox.value = mathjs.evaluate(textBox.value);
 						break;
 					default:
 						textBox.value += btn.textContent;
